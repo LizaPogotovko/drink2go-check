@@ -10,6 +10,10 @@
   justify-content: center;
   gap: 20px;
   align-items: center;
+
+  @media (min-width: variables.$desktop-width) {
+    justify-content: start;
+  }
 }
 
 .social__link::after {
@@ -22,10 +26,6 @@
   background-color: variables.$grey;
   transform: translate(9px, 9px);
 }
-
-// .social__link:hover::after {
-//   background-color: variables.$color-secondary;
-// }
 
 .social__link--vkontakte::after {
   mask-image: url("../../icons/stack.svg#vk");

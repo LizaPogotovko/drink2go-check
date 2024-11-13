@@ -1,0 +1,59 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.contacts__title {
+  font-family: variables.$font-tertiary;
+  font-size: 14px;
+  line-height: 20px;
+  color: variables.$color-secondary;
+  margin: 0 0 12px;
+}
+
+.contacts__address {
+  font-family: variables.$font-primary;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.contacts__address::before {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  mask-image: url("../../icons/stack.svg#address");
+  mask-position: center;
+  background-repeat: no-repeat;
+  background-color: variables.$color-secondary;
+  width: 13px;
+  height: 16px;
+
+}
+
+.contacts__address-text {
+  width: calc(100% - 20px);
+}
+
+.contacts__phone-link {
+  font-family: variables.$font-primary;
+  font-style: normal;
+  text-decoration: none;
+  color: variables.$base-color-text;
+  display: flex;
+  gap: 6px;
+}
+
+.contacts__phone-link::before {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  mask-image: url("../../icons/stack.svg#phone");
+  mask-position: center;
+  background-repeat: no-repeat;
+  background-color: variables.$color-secondary;
+  width: 13px;
+  height: 16px;
+}

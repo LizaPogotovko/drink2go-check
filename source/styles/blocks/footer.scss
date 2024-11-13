@@ -3,6 +3,17 @@
 
 .footer__container {
   padding: 20px 0 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    padding: 42px 20px 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .footer__container-logo {
@@ -14,6 +25,82 @@
 
   @media (min-width: variables.$tablet-width) {
     border: none;
+    padding: 0 0 32px;
+    grid-column: 1/4;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: column;
+    padding: 0;
+    grid-column: 1/1;
+    gap: 50px;
+    justify-content: start;
   }
 }
 
+.footer__logo {
+  display: block;
+  text-decoration: none;
+  color: variables.$base-color-text;
+}
+
+.footer__logo-text {
+  display: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    font-family: variables.$font-primary;
+    font-size: 14px;
+    line-height: 20px;
+
+  }
+}
+
+.footer__store-container,
+.footer__media-container,
+.footer__contacts-container {
+  padding: 20px;
+  border-bottom: 1px solid variables.$color-primary;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.footer__store-title,
+.footer__media-title {
+  font-family: variables.$font-tertiary;
+  font-size: 14px;
+  line-height: 20px;
+  color: variables.$color-secondary;
+  margin: 0 0 12px;
+}
+
+.footer__copyright {
+  color: variables.$grey;
+  text-decoration: none;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  padding: 20px 57px 0;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1/4;
+    justify-content: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-column: 1/6;
+  }
+}
+
+.footer__copyright::after {
+  content: "";
+  display: block;
+  background-image: url("../../icons/stack.svg#logo-academy");
+  width: 12px;
+  height: 16px;
+}

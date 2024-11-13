@@ -1,0 +1,23 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.store {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.store__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.store__link {
+  display: block;
+  font-family: variables.$font-secondary;
+  color: variables.$base-color-text;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 0;
+  font-size: 12px;
+  line-height: 16px;
+}

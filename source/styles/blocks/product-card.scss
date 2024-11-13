@@ -1,0 +1,88 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.product-card {
+  padding: 40px 20px 20px;
+  background-color: variables.$white;
+  text-align: center;
+  border-radius: 4px;
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 50px 30px 30px;
+  }
+}
+
+.product-card--current {
+  @media (min-width: variables.$desktop-width) {
+    box-shadow: 0 5px 15px 0 variables.$color-shadow;
+    padding: 50px 30px 30px;
+  }
+}
+
+.product-card__link-picture {
+  margin-bottom: 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.product-card__title {
+  font-family: variables.$font-tertiary;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 4px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.product-card__description {
+  font-family: variables.$font-primary;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: start;
+  margin: 0 0 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.product__card-price-container {
+  display: flex;
+  gap: 50px;
+
+  @media (min-width: variables.$tablet-width) {
+    gap: 99px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 67px;
+  }
+}
+
+.product-card__price {
+  font-family: variables.$font-quaternary;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.product-card__button {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 20px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card__button-picture {
+  text-align: center;
+}

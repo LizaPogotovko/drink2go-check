@@ -1,0 +1,19 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.footer__container {
+  padding: 20px 0 30px;
+}
+
+.footer__container-logo {
+  display: flex;
+  gap: 38px;
+  justify-content: space-between;
+  padding: 0 20px 22px;
+  border-bottom: 1px solid variables.$color-primary;
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+  }
+}
+

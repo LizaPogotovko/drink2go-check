@@ -1,0 +1,30 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.map {
+  display: block;
+  width: 100%;
+  height: 420px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 540px;
+  }
+}
+
+.map__picture {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 540px;
+  }
+}

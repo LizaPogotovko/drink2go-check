@@ -1,0 +1,50 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.social__link::after {
+  content: "";
+  mask-position: center;
+  mask-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-color: variables.$grey;
+  transform: translate(9px, 9px);
+}
+
+// .social__link:hover::after {
+//   background-color: variables.$color-secondary;
+// }
+
+.social__link--vkontakte::after {
+  mask-image: url("../../icons/stack.svg#vk");
+}
+
+.social__link--pinterest::after {
+  mask-image: url("../../icons/stack.svg#pinterest");
+}
+
+.social__link--classmates::after {
+  mask-image: url("../../icons/stack.svg#ok");
+}
+
+.social__item {
+  width: 40px;
+  height: 40px;
+}
+
+.social__item:hover {
+  background-color: variables.$color-primary;
+  color: variables.$color-secondary;
+}

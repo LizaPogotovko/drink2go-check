@@ -1,0 +1,29 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.select__control {
+  font-family: variables.$font-quaternary;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  background-color: variables.$color-tertiary;
+  color: variables.$color-secondary;
+  appearance: none;
+  text-align: right;
+  // position: relative;
+}
+
+.select__control:hover,
+.select__control:focus {
+  background-color: variables.$color-primary;
+}
+
+// .select__control::after {
+//   content: "";
+//   display: block;
+//   mask-image: url("../../icons/stack.svg#arrow-down");
+//   mask-size: 10px;
+//   mask-repeat: no-repeat;
+//   background-color: variables.$color-secondary;
+//   position: absolute;
+// }

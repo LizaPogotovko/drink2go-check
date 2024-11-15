@@ -1,0 +1,121 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.range__min-interval,
+.range__max-interval {
+  font-family: $font-secondary;
+  width: 118px;
+  height: 40px;
+  border: 2px solid variables.$color-secondary-lighter;
+  border-radius: 4px;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 88px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 134px;
+  }
+}
+
+.range__control-dash {
+  align-self: center;
+  color: variables.$grey;
+}
+
+.range__wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  background-color: $color-quaternary;
+  margin-bottom: 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  width: 241px;
+  height: 4px;
+  background-color: variables.$color-secondary-lighter;
+  top: -1px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 192px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 274px;
+  }
+}
+
+.range__handle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid variables.$color-secondary-lighter;
+  background-color: variables.$white;
+  cursor: pointer;
+}
+
+.range__handle--min {
+  top: -12px;
+  left: -6px;
+}
+
+.range__handle--max {
+  top: -12px;
+  left: 223px;
+
+  @media (min-width: variables.$tablet-width) {
+    left: 176px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    left: 257px;
+  }
+}
+
+.range__handle::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.range__handle:hover::before,
+.range__handle:focus::before {
+  background-color: variables.$color-secondary-hover;
+}
+
+.range__handle:active::before {
+  background-color: variables.$color-secondary;
+}
+
+.range__handle:disabled::before {
+  background-color: transparent;
+  border-color: variables.$grey;
+}
+
+.range__bar:disabled {
+  background-color: variables.$grey;
+}

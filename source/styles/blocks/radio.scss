@@ -1,0 +1,63 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.radio {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.radio__label {
+  font-size: 16px;
+  line-height: 24px;
+  color: variables.$base-color-text;
+}
+
+.radio__mark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid variables.$grey;
+}
+
+.radio__input[type="radio"]:checked + .radio__mark {
+  border: 2px solid variables.$secondary-color-text;
+}
+
+.radio__input[type="radio"]:checked + .radio__mark:hover,
+.radio__input[type="radio"]:checked:focus-visible + .radio__mark {
+  border: 2px solid variables.$color-secondary-lighter;
+}
+
+.radio__input[type="radio"]:checked + .radio__mark:hover::before,
+.radio__input[type="radio"]:checked:focus-visible + .radio__mark::before {
+  opacity: 25%;
+}
+
+.radio__input[type="radio"]:disabled + .radio__mark {
+  border: 2px solid variables.$color-quaternary;
+}
+
+.radio__input[type="radio"]:checked:disabled + .radio__mark::before {
+  background-color: variables.$color-quaternary;
+}
+
+// .radio__input[type="radio"]:checked:disabled + .radio__label {
+//   color: variables.$color-quaternary;
+// }
+
+.radio__input[type="radio"]:checked + .radio__mark::before {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: variables.$secondary-color-text;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  top: 2px;
+  left: 2px;
+}

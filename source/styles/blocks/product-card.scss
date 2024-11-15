@@ -81,6 +81,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 6px;
+  }
 }
 
 .product-card__button-picture {

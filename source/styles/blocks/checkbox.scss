@@ -1,0 +1,86 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.checkbox {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 10px;
+  position: relative;
+  vertical-align: middle;
+  font-size: 14px;
+  user-select: none;
+}
+
+.checkbox .checkbox__mark {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 42px;
+  height: 24px;
+  border: 2px solid variables.$grey;
+  border-radius: 25%/50%;
+  vertical-align: top;
+  background: variables.$grey;
+  transition: 0.2s;
+}
+
+.checkbox__mark::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: variables.$white;
+  transition: 0.15s;
+}
+
+.checkbox__input[type="checkbox"] {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark {
+  background-color: variables.$color-secondary;
+  border-color: variables.$color-secondary;
+}
+
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
+  transform: translateX(17px);
+}
+
+.checkbox__input[type="checkbox"]:not(:disabled) + .checkbox__mark:hover,
+.checkbox__input[type="checkbox"]:checked:focus-visible:not(:disabled) + .checkbox__mark {
+  border-color: variables.$color-secondary;
+  background-color: variables.$color-secondary-hover;
+  cursor: pointer;
+}
+
+.checkbox__input[type="checkbox"]:disabled.checkbox__input[type="checkbox"].checkbox__input[type="checkbox"]:disabled + .checkbox__mark {
+  filter: grayscale(70%);
+  border-color: variables.$color-quaternary;
+  background-color: variables.$color-quaternary;
+}
+
+.checkbox__input[type="checkbox"]:disabled + .checkbox__mark::before {
+  transform: translateX(17px);
+  background-color: variables.$grey;
+}
+
+.checkbox__input[type="checkbox"]:disabled:not(:checked) + .checkbox__mark::before {
+  background-color: variables.$color-tertiary;
+  transform: translateX(1px);
+}
+
+.checkbox__input[type="checkbox"]:disabled:not(:checked) + .checkbox__mark {
+  background-color: variables.$color-quaternary;
+}
+
+// .checkbox:disabled {
+//   color: variables.$grey;
+// }

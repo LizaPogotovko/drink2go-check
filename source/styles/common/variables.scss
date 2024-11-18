@@ -13,6 +13,7 @@ $font-quaternary: "montserrat-semibold", "Arial", sans-serif;
 
 
 $white: rgba(255, 255, 255, 1);
+$white-secondary: rgba(255, 255, 255, 0);
 $black: rgba(0, 0, 0, 1);
 $grey: rgba(189, 189, 189, 1);
 $color-shadow: rgba(0, 0, 0, 0.15);
@@ -25,8 +26,13 @@ $secondary-color-text: rgba(120, 89, 207, 1);
 $color-primary: rgba(240, 235, 255, 1);
 $color-secondary: rgba(120, 89, 207, 1);
 $color-secondary-hover: rgba(120, 89, 207, 0.25);
+$color-secondary-active: rgba(120, 89, 207, 0);
 $color-secondary-lighter: rgba(144, 112, 236, 1);
 $color-secondary-darker: rgba(89, 60, 172, 1);
 $color-tertiary: rgba(248, 248, 248, 1);
 $color-quaternary: rgba(226, 226, 226, 1);
+
+$bg-primary: rgba(243, 235, 225, 1);
+$bg-secondary: rgba(234, 230, 252, 1);
+$bg-tertiary: rgba(229, 230, 232, 1);
 

@@ -11,7 +11,6 @@
   <link rel="preload" href="fonts/montserrat-bold.woff" as="font">
   <link rel="preload" href="fonts/montserrat-medium.woff" as="font">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -60,70 +59,105 @@
   <main class="main">
 
     <section class="slider">
-      <div class="slider__wrapper container">
-        <div class="slider__card slider__card--active">
-          <img src="" alt="Декаф Флэт Уайт" class="slider__card-img">
+      <div class="slider__container">
+        <div class="slider__card slider__card--decaf container">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" width="600" height="600" srcset="images/slider1-desktop@1x.webp 1x, images/slider1-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="476" height="476" srcset="images/slider1-tablet@1x.webp 1x, images/slider1-tablet@2x.webp 2x">
+            <source type="image/webp" width="280" height="280" srcset="images/slider1-mobile@1x.webp 1x, images/slider1-mobile@2x.webp 2x">
+            <source type="image/png" media="(min-width: 1200px)" width="600" height="600" srcset="images/slider1-desktop@1x.png 1x, images/slider1-desktop@2x.png 2x">
+            <source type="image/png" media="(min-width: 768px)" width="476" height="476" srcset="images/slider1-tablet@1x.png 1x, images/slider1-tablet@2x.png 2x">
+            <img class="slider__card-img" src="images/slider1-mobile@1x.png" srcset="images/slider1-mobile@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
+          </picture>
           <div class="slider__card-content">
             <p class="slider__card-advertisement">Новинка!</p>
             <h2 class="slider__card-title">Декаф Флэт Уайт</h2>
             <p class="slider__card-description">Свежесваренный кофе без кофеина из Эфиопии
               с натуральным фермерским молоком — то, что нужно
               для расслабления после тяжёлого рабочего дня</p>
-            <p class="slider__card-old-price">295₽</p>
-            <p class="slider__card-new-price">225₽</p>
-            <button class="slider__card-button button button--primary">Заказать</button>
+            <div class="slider__information-container">
+              <div class="slider__card-price-container">
+                <p class="slider__card-old-price">295₽</p>
+                <p class="slider__card-new-price">225₽</p>
+              </div>
+              <a class="slider__card-button button button--primary" href="#">Заказать</a>
+            </div>
+
           </div>
         </div>
 
-        <div class="slider__card">
-          <img src="" alt="Лавандовый Латте" class="slider__card-img">
+        <div class="slider__card slider__card--latte container">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" width="600" height="600" srcset="images/slider2-desktop@1x.webp 1x, images/slider2-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="476" height="476" srcset="images/slider2-tablet@1x.webp 1x, images/slider2-tablet@2x.webp 2x">
+            <source type="image/webp" width="280" height="280" srcset="images/slider2-mobile@1x.webp 1x, images/slider2-mobile@2x.webp 2x">
+            <source type="image/png" media="(min-width: 1200px)" width="600" height="600" srcset="images/slider2-desktop@1x.png 1x, images/slider2-desktop@2x.png 2x">
+            <source type="image/png" media="(min-width: 768px)" width="476" height="476" srcset="images/slider2-tablet@1x.png 1x, images/slider2-tablet@2x.png 2x">
+            <img class="slider__card-img" src="images/slider2-mobile@1x.png" srcset="images/slider2-mobile@2x.png 2x" width="280" height="280" alt="Лавандовый Латте">
+          </picture>
           <div class="slider__card-content">
             <p class="slider__card-advertisement">Новинка!</p>
             <h2 class="slider__card-title">Лавандовый Латте</h2>
             <p class="slider__card-description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-            <p class="slider__card-old-price">285₽</p>
-            <p class="slider__card-new-price">265₽</p>
-            <button class="slider__card-button button button--primary">Заказать</button>
+            <div class="slider__information-container">
+              <div class="slider__card-price-container">
+                <p class="slider__card-old-price">285₽</p>
+                <p class="slider__card-new-price">265₽</p>
+              </div>
+              <a class="slider__card-button button button--primary" href="#">Заказать</a>
+            </div>
           </div>
         </div>
 
-        <div class="slider__card">
-          <img src="" alt="Тройной Эспрессо" class="slider__card-img">
+        <div class="slider__card slider__card--espresso container">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" width="600" height="600" srcset="images/slider3-desktop@1x.webp 1x, images/slider3-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="476" height="476" srcset="images/slider3-tablet@1x.webp 1x, images/slider3-tablet@2x.webp 2x">
+            <source type="image/webp" width="280" height="280" srcset="images/slider32-mobile@1x.webp 1x, images/slider3-mobile@2x.webp 2x">
+            <source type="image/png" media="(min-width: 1200px)" width="600" height="600" srcset="images/slider3-desktop@1x.png 1x, images/slider3-desktop@2x.png 2x">
+            <source type="image/png" media="(min-width: 768px)" width="476" height="476" srcset="images/slider3-tablet@1x.png 1x, images/slider3-tablet@2x.png 2x">
+            <img class="slider__card-img" src="images/slider3-mobile@1x.png" srcset="images/slider3-mobile@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо">
+          </picture>
           <div class="slider__card-content">
             <p class="slider__card-advertisement">Новинка!</p>
             <h2 class="slider__card-title">Тройной Эспрессо</h2>
             <p class="slider__card-description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-            <p class="slider__card-old-price">395₽</p>
-            <p class="slider__card-new-price">375₽</p>
-            <button class="slider__card-button button button--primary">Заказать</button>
+            <div class="slider__information-container">
+              <div class="slider__card-price-container">
+                <p class="slider__card-old-price">395₽</p>
+                <p class="slider__card-new-price">375₽</p>
+              </div>
+              <a class="slider__card-button button button--primary" href="#">Заказать</a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- стрелки переключения слайдов -->
-        <button class="slider__button slider__button--prev" type="button">
-          <span class="visually-hidden">Предыдущий слайд</span>
-        </button>
-        <button class="slider__button slider__button--next" type="button">
-          <span class="visually-hidden">Следующий слайд</span>
-        </button>
-        <!-- пагинация -->
-        <ol class="slider__pagination">
-          <li class="slider__pagination-item">
-            <button class="slider__pagination-button slider__pagination-button--current" type="button">
-              <span class="visually-hidden">1 слайд</span>
-            </button>
-          </li>
-          <li class="slider__pagination-item">
-            <button class="slider__pagination-button" type="button">
-              <span class="visually-hidden">2 слайд</span>
-            </button>
-          </li>
-          <li class="slider__pagination-item">
-            <button class="slider__pagination-button" type="button">
-              <span class="visually-hidden">3 слайд</span>
-            </button>
-          </li>
-        </ol>
+      <!-- стрелки переключения слайдов -->
+      <button class="slider__button slider__button--prev" type="button">
+        <span class="visually-hidden">Предыдущий слайд</span>
+      </button>
+      <button class="slider__button slider__button--next" type="button">
+        <span class="visually-hidden">Следующий слайд</span>
+      </button>
+      <!-- пагинация -->
+      <ol class="slider__pagination">
+        <li class="slider__pagination-item">
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">1 слайд</span>
+          </button>
+        </li>
+        <li class="slider__pagination-item">
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">2 слайд</span>
+          </button>
+        </li>
+        <li class="slider__pagination-item">
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">3 слайд</span>
+          </button>
+        </li>
+      </ol>
 
       </div>
 
@@ -535,6 +569,7 @@
       </a>
     </div>
   </footer>
+  <script src="scripts/main.js" type="module"></script>
 </body>
 
 </html>

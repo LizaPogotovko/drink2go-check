@@ -10,6 +10,7 @@
   <link rel="preload" href="fonts/montserrat-semibold.woff" as="font">
   <link rel="preload" href="fonts/montserrat-bold.woff" as="font">
   <link rel="preload" href="fonts/montserrat-medium.woff" as="font">
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -206,15 +207,7 @@
             <form action="#" class="catalog__filter-form form">
               <fieldset class="form__group">
                 <legend class="form__title">Цена</legend>
-                <div class="range__scale">
-                  <div class="range__bar">
-                    <button class="range__handle range__handle--min" type="button">
-                      <span class="visually-hidden">Управление нижней границей стоимости</span>
-                    </button>
-                    <button class="range__handle range__handle--max" type="button">
-                      <span class="visually-hidden">Управление верхней границей стоимости</span>
-                    </button>
-                  </div>
+                <div class="range__scale" id="slider">
                 </div>
                 <div class="form__range range">
                   <div class="range__wrapper-inputs">
@@ -569,6 +562,7 @@
       </a>
     </div>
   </footer>
+  <script src="vendor/nouislider/nouislider.js"></script>
   <script src="scripts/main.js" type="module"></script>
 </body>
 

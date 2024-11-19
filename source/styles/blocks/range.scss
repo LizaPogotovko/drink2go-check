@@ -31,10 +31,12 @@
 }
 
 .range__scale {
-  position: relative;
+  width: 100%;
   height: 2px;
-  background-color: $color-quaternary;
+  border: none;
+  background-color: variables.$color-quaternary;
   margin-bottom: 24px;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 20px;
@@ -45,24 +47,15 @@
   }
 }
 
-.range__bar {
-  position: absolute;
-  width: 241px;
-  height: 4px;
-  background-color: variables.$color-secondary-lighter;
-  top: -1px;
-
-  @media (min-width: variables.$tablet-width) {
-    width: 192px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    width: 274px;
-  }
+.range__scale .range__bar {
+  background: variables.$color-secondary-lighter;
 }
 
-.range__handle {
-  position: absolute;
+.range__handle::after {
+  display: none;
+}
+
+.range__scale .range__handle {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -71,22 +64,12 @@
   cursor: pointer;
 }
 
-.range__handle--min {
-  top: -12px;
-  left: -6px;
+.range__scale .range__handle--min {
+  top: -10px;
 }
 
-.range__handle--max {
+.range__scale .range__handle--max {
   top: -12px;
-  left: 223px;
-
-  @media (min-width: variables.$tablet-width) {
-    left: 176px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    left: 257px;
-  }
 }
 
 .range__handle::before {

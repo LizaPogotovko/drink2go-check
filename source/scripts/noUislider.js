@@ -4,6 +4,13 @@ const formatValues = [
   document.querySelector(".range__max-interval"),
 ];
 
+const sliderSettings = {
+  MIN_RANGE: 0,
+  MAX_RANGE: 1000,
+  MIN_START: 0,
+  MAX_START: 900,
+}
+
 const formatForSlider = {
   from: function (formattedValue) {
     return Number(formattedValue);
@@ -15,11 +22,11 @@ const formatForSlider = {
 
 function createSlider() {
   noUiSlider.create(rangeSlider, {
-    start: [0, 900],
+    start: [sliderSettings.MIN_START, sliderSettings.MAX_START],
     connect: true,
     range: {
-      min: 0,
-      max: 1000,
+      min: sliderSettings.MIN_RANGE,
+      max: sliderSettings.MAX_RANGE,
     },
     format: formatForSlider,
   })

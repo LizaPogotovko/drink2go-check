@@ -5,10 +5,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-right: -20px;
 
   @media (min-width: variables.$tablet-width) {
     min-width: 579px;
     justify-content: space-between;
+    margin-right: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -27,33 +29,75 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 20px;
+  }
 }
 
 .navigation__list-item {
+  border-top: 1px solid variables.$color-primary;
+}
+
+.navigation__list-item:last-child {
+  border-bottom: 1px solid variables.$color-primary;
+}
+
+.navigation__list-item:active {
+  background-color: variables.$color-primary;
+}
+
+.navigation__list--open {
+  @media (max-width: variables.$mobile-width-only) {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background-color: variables.$white;
+    z-index: 2;
+  }
+}
+
+.navigation__list-link {
   text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: variables.$base-color-text;
+  padding: 20px 120px;
 
   @media (min-width: variables.$tablet-width) {
     padding: 32px 20px;
   }
 }
 
-.navigation__list-link {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: variables.$base-color-text;
-}
-
-.navigation__list-link--active {
-  position: relative;
+.navigation__list-link:hover,
+.navigation__list-link:focus {
   color: variables.$color-secondary;
 }
 
+.navigation__list-link:active {
+  color: variables.$color-secondary;
+  background-color: variables.$color-primary;
+}
+
+.navigation__list-link--active {
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    color: variables.$color-secondary;
+  }
+}
+
 .navigation__list-item--active {
-  border-bottom: 2px solid variables.$color-secondary;
+  @media (min-width: variables.$tablet-width) {
+    border-bottom: 2px solid variables.$color-secondary;
+  }
 }
 
 .navigation__toggle {
+  position: relative;
   width: 60px;
   height: 60px;
   padding: 0;
@@ -74,16 +118,25 @@
     background-color: variables.$black;
     width: 16px;
     height: 12px;
-    margin-left: auto;
+    position: absolute;
+    top: 21px;
+    left: 22px;
   }
 }
 
+.navigation__toggle--open::before {
+  mask-image: url("../../icons/stack.svg#close");
+}
+
 .navigation__profile {
+  position: relative;
   width: 60px;
   height: 60px;
   padding: 0;
   border: none;
   background-color: transparent;
+  color: variables.$base-color-text;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -92,10 +145,17 @@
     background-color: variables.$base-color-text;
     width: 16px;
     height: 16px;
-    margin-left: auto;
+    position: absolute;
+    top: 21px;
+    left: 22px;
 
     @media (min-width: variables.$tablet-width) {
       margin-left: 0;
+      top: 31px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      position: static;
     }
   }
 
@@ -115,7 +175,6 @@
 
 .navigation__profile-description {
   display: none;
-  color: variables.$base-color-text;
 
   @media (min-width: variables.$desktop-width) {
     display: block;
@@ -133,11 +192,14 @@
 }
 
 .navigation__basket {
+  position: relative;
   width: 60px;
   height: 60px;
   padding: 0;
   border: none;
   background-color: transparent;
+  color: variables.$base-color-text;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -146,10 +208,17 @@
     background-color: variables.$base-color-text;
     width: 16px;
     height: 16px;
-    margin-left: auto;
+    position: absolute;
+    top: 21px;
+    left: 22px;
 
     @media (min-width: variables.$tablet-width) {
       margin-left: 0;
+      top: 31px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      position: static;
     }
   }
 
@@ -169,10 +238,29 @@
 
 .navigation__basket-description {
   display: none;
-  color: variables.$base-color-text;
 
   @media (min-width: variables.$desktop-width) {
     display: block;
     text-transform: uppercase;
   }
+}
+
+.navigation__profile:hover,
+.navigation__profile:focus,
+.navigation__basket:hover,
+.navigation__basket:focus {
+  color: variables.$color-secondary;
+}
+
+.navigation__profile:hover::before,
+.navigation__profile:focus::before,
+.navigation__basket:hover::before,
+.navigation__basket:focus::before {
+  background-color: variables.$color-secondary;
+}
+
+.navigation__profile:active,
+.navigation__basket:active,
+.navigation__toggle:active {
+  background-color: variables.$color-primary;
 }

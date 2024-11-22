@@ -20,7 +20,7 @@
 }
 
 .product-card__link-picture {
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 30px;
@@ -32,6 +32,7 @@
   font-size: 18px;
   line-height: 32px;
   margin: 0 0 4px;
+  text-align: left;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 24px;

@@ -116,11 +116,11 @@
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: variables.$black;
-    width: 16px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     position: absolute;
     top: 21px;
-    left: 22px;
+    left: 21px;
   }
 }
 
@@ -147,7 +147,7 @@
     height: 16px;
     position: absolute;
     top: 21px;
-    left: 22px;
+    left: 25px;
 
     @media (min-width: variables.$tablet-width) {
       margin-left: 0;

@@ -2,7 +2,7 @@
 @use "../common/variables.scss";
 
 .form {
-  margin-bottom: 36px;
+  margin-bottom: 43px;
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
@@ -19,8 +19,8 @@
 }
 
 .form__group {
-  margin: 0;
-  padding: 0 0 30px;
+  margin: 0 0 29px;
+  padding: 0;
   border: none;
 
   @media (min-width: variables.$tablet-width) {
@@ -29,12 +29,24 @@
 }
 
 .form__title {
+  padding: 0;
   font-family: variables.$font-quaternary;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 20px;
-  padding: 0;
 }
+
+.form__title--range {
+  margin-bottom: 28px;
+}
+
+// .form__title--radio {
+
+// }
+
+// .form__title--checkbox {
+
+// }
 
 .form__list {
   margin: 0;
@@ -44,6 +56,10 @@
 
 .form__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.form__item--checkbox:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .form__button {

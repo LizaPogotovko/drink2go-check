@@ -20,7 +20,7 @@
   display: flex;
   gap: 38px;
   justify-content: space-between;
-  padding: 0 20px 22px;
+  padding: 0 20px 19px;
   border-bottom: 1px solid variables.$color-primary;
 
   @media (min-width: variables.$tablet-width) {
@@ -42,6 +42,7 @@
   display: block;
   text-decoration: none;
   color: variables.$base-color-text;
+  transform: translateY(2px);
 }
 
 .footer__logo-text {
@@ -81,7 +82,7 @@
   color: variables.$grey;
   text-decoration: none;
   display: flex;
-  gap: 4px;
+  gap: 3px;
   flex-wrap: wrap;
   padding: 20px 57px 0;
   font-size: 12px;

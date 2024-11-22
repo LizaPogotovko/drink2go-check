@@ -70,7 +70,7 @@
 }
 
 .slider__card-img {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   @media (min-width: variables.$tablet-width) {
     order: 0;
@@ -78,8 +78,6 @@
 }
 
 .slider__card-content {
-  max-width: calc(100% - 65px);
-
   @media (min-width: variables.$tablet-width) {
     order: -1;
     max-width: 608px;
@@ -93,12 +91,14 @@
 
 .slider__card-advertisement {
   font-family: variables.$font-tertiary;
+  font-weight: 700;
   font-size: 12px;
   line-height: 16px;
   color: variables.$color-secondary;
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 4px;
+
 
   @media (min-width: variables.$desktop-width) {
     text-align: left;
@@ -143,8 +143,9 @@
 
 .slider__information-container {
   display: flex;
-  gap: 20px;
+  text-align: center;
   justify-content: center;
+  gap: 21px;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 20px;
@@ -210,6 +211,7 @@
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: variables.$color-secondary;
+  top: 48%;
 }
 
 .slider__button--prev::after {

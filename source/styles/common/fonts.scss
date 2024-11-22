@@ -1,7 +1,7 @@
 /* здесь подключите шрифты */
 
 @use "mixins.scss";
-@include mixins.font-face("montserrat-regular", 400, normal, url("../../fonts/montserrat-regular.woff") format("woff"));
-@include mixins.font-face("montserrat-bold", 700, normal, url("../../fonts/montserrat-bold.woff") format("woff"));
-@include mixins.font-face("montserrat-semibold", 600, normal, url("../../fonts/montserrat-semibold.woff") format("woff"));
-@include mixins.font-face("montserrat-medium", 500, normal, url("../../fonts/montserrat-medium.woff") format("woff"));
+@include mixins.font-face("montserrat-regular", 400, normal, url("../../fonts/montserrat-regular.woff2") format("woff2"));
+@include mixins.font-face("montserrat-bold", 700, normal, url("../../fonts/montserrat-bold.woff2") format("woff2"));
+@include mixins.font-face("montserrat-semibold", 600, normal, url("../../fonts/montserrat-semibold.woff2") format("woff2"));
+@include mixins.font-face("montserrat-medium", 500, normal, url("../../fonts/montserrat-medium.woff2") format("woff2"));

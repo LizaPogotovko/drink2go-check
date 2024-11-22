@@ -2,14 +2,19 @@
 @use "../common/variables.scss";
 
 .checkbox {
-  display: inline-block;
+  display: flex;
+  gap: 11px;
   height: 28px;
   line-height: 28px;
-  margin-right: 10px;
   position: relative;
   vertical-align: middle;
   font-size: 14px;
   user-select: none;
+}
+
+.checkbox__label {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .checkbox .checkbox__mark {
@@ -80,7 +85,3 @@
 .checkbox__input[type="checkbox"]:disabled:not(:checked) + .checkbox__mark {
   background-color: variables.$color-quaternary;
 }
-
-// .checkbox:disabled {
-//   color: variables.$grey;
-// }

@@ -9,6 +9,11 @@
   color: variables.$base-color-text;
   position: relative;
   padding-right: 0;
+  height: 60px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 80px;
+  }
 }
 
 .header__container {

@@ -7,10 +7,3 @@ uploadSlide();
 createSlider();
 clickOnNav();
 addRangeHandleClass();
-
-
-
-
-
-
-

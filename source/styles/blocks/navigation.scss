@@ -28,6 +28,7 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    gap: 2px;
   }
 
   @media (min-width: variables.$desktop-width) {

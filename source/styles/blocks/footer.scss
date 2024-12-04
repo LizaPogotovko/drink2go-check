@@ -7,8 +7,8 @@
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
-    padding: 42px 20px 40px;
+    gap: 29px 30px;
+    padding: 40px 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -25,7 +25,8 @@
 
   @media (min-width: variables.$tablet-width) {
     border: none;
-    padding: 0 0 32px;
+    // margin: 0 0 29px;
+    padding: 0;
     grid-column: 1/4;
   }
 
@@ -84,7 +85,7 @@
   display: flex;
   gap: 3px;
   flex-wrap: wrap;
-  padding: 20px 57px 0;
+  // padding: 20px 57px 0;
   font-size: 12px;
   line-height: 16px;
 

@@ -38,7 +38,7 @@
   line-height: 36px;
   font-family: variables.$font-tertiary;
   text-align: center;
-  margin: 0 0 22px;
+  margin: 0 0 21px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 42px;
@@ -83,8 +83,8 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-bottom: 70px;
+    gap: 40px 30px;
+    margin-bottom: 77px;
   }
 
   @media (min-width: variables.$desktop-width) {
